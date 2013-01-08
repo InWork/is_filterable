@@ -1,0 +1,67 @@
+= isFilterable for Rails3
+
+Simple AJAX filter to filter/search results a ActiveRecord Model
+
+== Install
+
+=== Rails
+Inside your Gemfile:
+  gem "is_filterable"
+
+and then run:
+  bundle install
+
+To install the queue_worker_dispatcher script, which starts all workers, execute the following rake command:
+  rake queue_dispatcher:sync
+
+=== Javascripts
+
+You have to include the filterable Javascript in your Javascript file.
+
+    //= require filterable
+
+=== Gem Dependencies
+
+Please check if all those requirements are satisfied on your environment.
+
+* jquery-rails
+
+
+== Usage
+
+=== Model
+
+In the model you have to include:
+class User < ActiveRecord::Base
+  ...
+  is_filterable
+  ...
+end
+
+=== Controller
+
+In your Controller you have to use the method search.
+The search Method used the first parmameter as the attribute on which the query should be done and the second as input filter parameter.
+
+In your Controller
+class UsersController < ApplicationController
+  ...
+  def index
+      @users = User.search('login',params[:search]).order('login').page(params[:page]).per_page(15)
+
+      respond_to do |format|
+        format.html # index.html.erb
+        format.js
+      end
+    end
+  ...
+end
+
+
+=== View
+
+= text_field_tag :search, params[:search], :class => "input-medium search-query search-observer", :placeholder => "user name"
+
+== Copyright
+
+Copyright (c) 2011 - 2012 In&Work AG. See LICENSE for details.
