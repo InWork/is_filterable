@@ -58,7 +58,7 @@ end
 
 === View
 
-= text_field_tag :search, params[:search], :class => "input-medium search-query search-observer", :placeholder => "user name"
+  text_field_tag :search, params[:search], :class => "input-medium search-query search-observer", :placeholder => "user name"
 
 == Copyright
 
