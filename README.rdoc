@@ -11,8 +11,6 @@ Inside your Gemfile:
 and then run:
   bundle install
 
-To install the queue_worker_dispatcher script, which starts all workers, execute the following rake command:
-  rake queue_dispatcher:sync
 
 === Javascripts
 
