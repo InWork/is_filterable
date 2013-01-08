@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.version     = IsFilterable::VERSION
   s.authors     = ["Lucien Stuker","Philip Kurmann"]
   s.email       = ["lucien.stuker@inwork.ch","philip.kurmann@inwork.ch"]
-  s.homepage    = ""
+  s.homepage    = "https://github.com/InWork/is_filterable"
   s.summary     = %q{Simple AJAX filter to filter/search results a ActiveRecord Model}
   s.description = %q{This Gem implements the option to filter/search in a ActiveRecord model by a search pattern}
 
