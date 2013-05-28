@@ -7,8 +7,8 @@ module IsFilterable
 
     module ClassMethods
       def is_filterable args = {}
-        include Filterable::IsFilterable::InstanceMethods
-        extend Filterable::IsFilterable::SingletonMethods
+        include IsFilterable::Filterable::InstanceMethods
+        extend IsFilterable::Filterable::SingletonMethods
       end
     end
 
