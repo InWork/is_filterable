@@ -1,4 +1,5 @@
 = isFilterable for Rails3
+{<img src="https://codeclimate.com/github/InWork/is_filterable.png" />}[https://codeclimate.com/github/InWork/is_filterable]
 
 Simple AJAX filter to filter/search results a ActiveRecord Model
 
