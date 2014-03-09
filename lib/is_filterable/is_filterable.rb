@@ -18,7 +18,7 @@ module IsFilterable
         if search
           where "#{attribute} LIKE ?", "%#{search}%"
         else
-          scoped
+          where(nil)
         end
       end
     end
